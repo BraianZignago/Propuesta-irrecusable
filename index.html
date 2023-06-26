@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Propuesta irrecusable</title>
+        <style>
+            body{
+                    display: flexbox;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                .box {
+                    font-size: 20px;
+                    color: white;
+                    height: 100vh;
+                    width: 100vw;
+                    border-radius: 10px;
+                    background: #191919;
+                    flex-direction: column;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+
+                .buttons-container {
+                    display: flex;
+                    justify-content: space-around;
+                    height: 50px;
+                    width: 150px;
+                }
+
+                button {
+                    height: 30px;
+                    width: 50px;
+                    background: white;
+                    border-radius: 5px;
+                    color: blue;
+                    font-weight: 600;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <p>Pastel con coca</p>
+            <div class="buttons-container">
+                <button>
+                    <p><a href="https://img.freepik.com/vector-gratis/flor-rosa-roja_43623-936.jpg?w=2000" target="_blank" rel="noopener noreferrer">SI</a></p>
+
+                </button>
+                <button id="no">No</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        let button = document.getElementById('no');
+        let height = window.innerHeight - 50;
+        let width = window.innerWidth - 50;
+
+        button.addEventListener('mouseover', function(){
+            button.style.position = "absolute";
+            button.style.top = Math.random() * height + "px";
+            button.style.left = Math.random() * height + "px";
+        })
+    </script>
+</html>
